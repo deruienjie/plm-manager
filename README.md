@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# PLM 项目管理系统
 
-## Getting Started
+公司内部 PLM（Product Lifecycle Management）项目管理系统，支持需求提报、任务跟踪、项目看板等功能。
 
-First, run the development server:
+## 快速启动
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
 pnpm dev
-# or
-bun dev
+# 访问 http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 测试账号
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| 角色 | 用户名 | 密码 |
+|------|--------|------|
+| 管理员 | admin | admin123 |
+| 项目经理 | zhangsan | 123456 |
+| 普通成员 | lisi | 123456 |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 技术栈
 
-## Learn More
+- Next.js 14 (App Router)
+- Tailwind CSS + 自定义 UI 组件
+- SQLite (better-sqlite3)
+- Recharts (统计图表)
 
-To learn more about Next.js, take a look at the following resources:
+## 功能模块
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **工作台** - 个人待办、项目进度、统计图表、动态时间线
+- **项目管理** - 项目 CRUD、阶段管理、进度追踪
+- **需求管理** - 需求提交、状态流转、评论讨论
+- **任务看板** - Kanban 三列视图、拖拽变更状态
+- **成员管理** - 用户创建、角色分配
+- **认证系统** - 账号密码登录（预留微信扫码登录接口）
