@@ -3,7 +3,10 @@ import path from 'path';
 import bcrypt from 'bcryptjs';
 import { v4 as uuid } from 'uuid';
 
-const DB_PATH = path.join(process.cwd(), 'plm-data.db');
+// Use /tmp on Vercel (serverless), local dir otherwise
+const DB_PATH = process.env.VERCEL
+  ? '/tmp/plm-data.db'
+  : path.join(process.cwd(), 'plm-data.db');
 
 let db: Database.Database;
 
