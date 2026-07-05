@@ -1,4 +1,5 @@
 import { initDb, seedDb } from '@/lib/db';
+import './globals.css';
 
 // Initialize database on first import
 let initialized = false;
